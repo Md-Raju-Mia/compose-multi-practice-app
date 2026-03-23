@@ -12,12 +12,12 @@ Explore the individual projects below. Each link will take you directly to the s
 
 | Project Name | Preview | Description |
 | :--- | :---: | :--- |
-| **[01. Happy Birthday App](./app/src/main/java/com/example/kotlinprogramming/practice/app1_happy_birthday)** | <img src="app/src/main/java/com/example/kotlinprogramming/practice/app1_happy_birthday/screenshots/happy_birthday_preview.png" width="200"/> | My first step into Compose! Focused on Text, Images, and basic Box layouts. |
-| **[02. Compose Article](./app/src/main/java/com/example/kotlinprogramming/practice/app2_compose_article)** | <img src="app/src/main/java/com/example/kotlinprogramming/practice/app2_compose_article/screenshots/compose_article_preview.png" width="200"/> | Learning structured content with Columns, padding, and text justification. |
-| **[03. Task Manager](./app/src/main/java/com/example/kotlinprogramming/practice/app3_task_manager)** | <img src="app/src/main/java/com/example/kotlinprogramming/practice/app3_task_manager/screenshots/task_manager_preview.png" width="200"/> | A clean "Task Completed" UI focusing on vertical/horizontal centering. |
-| **[04. Compose Quadrant](./app/src/main/java/com/example/kotlinprogramming/practice/app4_compose_quadrant)** | <img src="app/src/main/java/com/example/kotlinprogramming/practice/app4_compose_quadrant/screenshots/compose_quadrant_preview.png" width="200"/> | Mastering the `Weight` modifier to create a perfect 2x2 responsive grid. |
-| **[05. Business Card App](./app/src/main/java/com/example/kotlinprogramming/practice/app6_business_card_app)** | *(Preview Coming Soon)* | A custom-branded business card UI practicing Icons and Material Design. |
 | **[06. Dice Roller App](./app/src/main/java/com/example/kotlinprogramming/practice/app7_diceroller)** | *(Preview Coming Soon)* | Introducing **State**! An interactive app where UI updates based on user clicks. |
+| **[05. Business Card App](./app/src/main/java/com/example/kotlinprogramming/practice/app6_business_card_app)** | *(Preview Coming Soon)* | A custom-branded business card UI practicing Icons and Material Design. |
+| **[04. Compose Quadrant](./app/src/main/java/com/example/kotlinprogramming/practice/app4_compose_quadrant)** | <img src="app/src/main/java/com/example/kotlinprogramming/practice/app4_compose_quadrant/screenshots/compose_quadrant_preview.png" width="200"/> | Mastering the `Weight` modifier to create a perfect 2x2 responsive grid. |
+| **[03. Task Manager](./app/src/main/java/com/example/kotlinprogramming/practice/app3_task_manager)** | <img src="app/src/main/java/com/example/kotlinprogramming/practice/app3_task_manager/screenshots/task_manager_preview.png" width="200"/> | A clean "Task Completed" UI focusing on vertical/horizontal centering. |
+| **[02. Compose Article](./app/src/main/java/com/example/kotlinprogramming/practice/app2_compose_article)** | <img src="app/src/main/java/com/example/kotlinprogramming/practice/app2_compose_article/screenshots/compose_article_preview.png" width="200"/> | Learning structured content with Columns, padding, and text justification. |
+| **[01. Happy Birthday App](./app/src/main/java/com/example/kotlinprogramming/practice/app1_happy_birthday)** | <img src="app/src/main/java/com/example/kotlinprogramming/practice/app1_happy_birthday/screenshots/happy_birthday_preview.png" width="200"/> | My first step into Compose! Focused on Text, Images, and basic Box layouts. |
 
 ---
 
