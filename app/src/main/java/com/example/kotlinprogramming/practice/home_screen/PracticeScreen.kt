@@ -5,5 +5,6 @@ enum class PracticeScreen {
     HAPPY_BIRTHDAY,
     COMPOSE_ARTICLE,
     TASK_MANAGER,
+    COMPOSE_QUADRANT,
     DICE_ROLLER
 }

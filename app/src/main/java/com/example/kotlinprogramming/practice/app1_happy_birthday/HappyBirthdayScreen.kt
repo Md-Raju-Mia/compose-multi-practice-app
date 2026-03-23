@@ -1,4 +1,4 @@
-package com.example.kotlinprogramming.practice.app1_happybirthday
+package com.example.kotlinprogramming.practice.app1_happy_birthday
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement

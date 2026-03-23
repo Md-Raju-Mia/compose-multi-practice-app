@@ -11,9 +11,10 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import com.example.kotlinprogramming.practice.app1_happybirthday.GreetingImage
+import com.example.kotlinprogramming.practice.app1_happy_birthday.GreetingImage
 import com.example.kotlinprogramming.practice.app2_compose_article.ComposeArticleApp
-import com.example.kotlinprogramming.practice.app3_taskmanager.TaskManagerApp
+import com.example.kotlinprogramming.practice.app3_task_manager.TaskManagerApp
+import com.example.kotlinprogramming.practice.app4_compose_quadrant.ComposeQuadrantApp
 import com.example.kotlinprogramming.practice.home_screen.HomeScreen
 import com.example.kotlinprogramming.practice.home_screen.PracticeScreen
 import com.example.kotlinprogramming.ui.theme.KotlinProgrammingTheme
@@ -44,6 +45,9 @@ class MainActivity : ComponentActivity() {
                         onTaskManagerClick = {
                             currentScreen = PracticeScreen.TASK_MANAGER
                         },
+                        onComposeQuadrantClick = {
+                            currentScreen = PracticeScreen.COMPOSE_QUADRANT
+                        },
                         onDiceRollerClick = {
                             currentScreen = PracticeScreen.DICE_ROLLER
                         }
@@ -63,6 +67,9 @@ class MainActivity : ComponentActivity() {
 
                     PracticeScreen.TASK_MANAGER -> {
                         TaskManagerApp()
+                    }
+                    PracticeScreen.COMPOSE_QUADRANT -> {
+                        ComposeQuadrantApp()
                     }
                     
                     PracticeScreen.DICE_ROLLER -> {

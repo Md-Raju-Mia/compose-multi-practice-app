@@ -12,5 +12,8 @@
     <string name="all_tasks_completed_text">All tasks completed</string>
     <string name="nice_work_text">Nice work!</string>
     <string name="task_manager_app_text">Task Manager App</string>
+    <string name="text_composable_text">Text composable</string>
+    <string name="compose_quadrant_description_text">Displays text and follows the recommended Material Design guidelines.</string>
+    <string name="compose_quadrant_app_text">Compose Quadrant App</string>
 
 </resources>
