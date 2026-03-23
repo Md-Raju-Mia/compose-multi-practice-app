@@ -54,7 +54,7 @@ I learned how to nest layouts:
 ---
 
 ## 📸 Final Look
-<img src="screenshots/task_manager_preview.png" width="300" />
+<img src="screenshots/compose_quadrant_preview.png" width="300" />
 
 ---
 
