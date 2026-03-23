@@ -6,5 +6,6 @@ enum class PracticeScreen {
     COMPOSE_ARTICLE,
     TASK_MANAGER,
     COMPOSE_QUADRANT,
+    BUSINESS_CARD,
     DICE_ROLLER
 }

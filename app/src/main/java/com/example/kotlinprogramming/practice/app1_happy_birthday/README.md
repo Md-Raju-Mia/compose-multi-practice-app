@@ -13,5 +13,9 @@ This is my first Android application developed while learning the basics of Jetp
 - Layered text elements with custom font sizes and alignment.
 - Support for system back-navigation.
 
-## 📸 Preview
-*(Tip: Add a screenshot of the app here from your device)*
+## 📸 Final Look
+<img src="screenshots/happy_birthday_preview.png" width="300" />
+
+---
+
+*Created with ❤️ while learning Jetpack Compose.*

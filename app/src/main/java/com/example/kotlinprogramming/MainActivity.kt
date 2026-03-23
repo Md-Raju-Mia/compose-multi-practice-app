@@ -48,6 +48,9 @@ class MainActivity : ComponentActivity() {
                         onComposeQuadrantClick = {
                             currentScreen = PracticeScreen.COMPOSE_QUADRANT
                         },
+                        onBusinessCardClick = {
+                            currentScreen = PracticeScreen.BUSINESS_CARD
+                        },
                         onDiceRollerClick = {
                             currentScreen = PracticeScreen.DICE_ROLLER
                         }
@@ -70,6 +73,9 @@ class MainActivity : ComponentActivity() {
                     }
                     PracticeScreen.COMPOSE_QUADRANT -> {
                         ComposeQuadrantApp()
+                    }
+                    PracticeScreen.BUSINESS_CARD -> {
+                        // Put BusinessCardScreen() here later
                     }
                     
                     PracticeScreen.DICE_ROLLER -> {

@@ -22,6 +22,7 @@ fun HomeScreen(
     onComposableArticleClick: () -> Unit,
     onTaskManagerClick: () -> Unit,
     onComposeQuadrantClick: () -> Unit,
+    onBusinessCardClick: () -> Unit,
     onDiceRollerClick: () -> Unit
 ){
     Column(
@@ -55,6 +56,11 @@ fun HomeScreen(
         AppLauncherCard(
             title = stringResource(R.string.compose_quadrant_app_text),
             onClick = onComposeQuadrantClick
+        )
+
+        AppLauncherCard(
+            title = stringResource(R.string.business_card_app_text),
+            onClick = onBusinessCardClick
         )
 
         AppLauncherCard(
