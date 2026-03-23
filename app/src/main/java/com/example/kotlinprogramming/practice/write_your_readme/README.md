@@ -200,6 +200,24 @@ Short explanation of project
 ```kotlin
 // example
 ````
+# 🖼️ 1. Adding Screenshots (Step-by-Step)
+To add a screenshot to your project and display it in your `README.md`, follow these steps:
+### Step 1: Create a Folder
+Switch to the **Project** view in Android Studio and create a folder named `screenshots` (e.g., at the root of your package or project).
+### Step 2: Add your Image
+Paste your screenshot image into that folder (e.g., `preview.png`).
+### Step 3: Use the Markdown Syntax
+Use the following syntax to display the image. **Note the `!` at the beginning.**
+```md
+![Alt Text](path_to_image)
+ ```
+### Step 4: Handle Relative Paths
+If your `README.md` and `screenshots` folder are in different locations, you need to navigate the directory tree:
+- Same folder: `![Preview](./preview.png)`
+- Folder inside current directory: `![Preview](./screenshots/preview.png)`
+- Folder two levels up: `![Preview](../../screenshots/preview.png)`
+---
+
 
 ## 🛠 Tech Stack
 

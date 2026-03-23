@@ -13,6 +13,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import com.example.kotlinprogramming.practice.app1_happybirthday.GreetingImage
 import com.example.kotlinprogramming.practice.app2_compose_article.ComposeArticleApp
+import com.example.kotlinprogramming.practice.app3_taskmanager.TaskManagerApp
 import com.example.kotlinprogramming.practice.home_screen.HomeScreen
 import com.example.kotlinprogramming.practice.home_screen.PracticeScreen
 import com.example.kotlinprogramming.ui.theme.KotlinProgrammingTheme
@@ -40,6 +41,9 @@ class MainActivity : ComponentActivity() {
                         onComposableArticleClick = {
                             currentScreen = PracticeScreen.COMPOSE_ARTICLE
                         },
+                        onTaskManagerClick = {
+                            currentScreen = PracticeScreen.TASK_MANAGER
+                        },
                         onDiceRollerClick = {
                             currentScreen = PracticeScreen.DICE_ROLLER
                         }
@@ -57,7 +61,10 @@ class MainActivity : ComponentActivity() {
                         ComposeArticleApp()
                     }
 
-
+                    PracticeScreen.TASK_MANAGER -> {
+                        TaskManagerApp()
+                    }
+                    
                     PracticeScreen.DICE_ROLLER -> {
                         // Put DiceRollerScreen() here later
                     }
