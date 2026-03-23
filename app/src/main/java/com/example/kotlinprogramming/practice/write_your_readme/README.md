@@ -200,7 +200,7 @@ Short explanation of project
 ```kotlin
 // example
 ````
-# 🖼️ 1. Adding Screenshots (Step-by-Step)
+# 🖼️ 12. Adding Screenshots (Step-by-Step)
 To add a screenshot to your project and display it in your `README.md`, follow these steps:
 ### Step 1: Create a Folder
 Switch to the **Project** view in Android Studio and create a folder named `screenshots` (e.g., at the root of your package or project).
@@ -218,6 +218,31 @@ If your `README.md` and `screenshots` folder are in different locations, you nee
 - Folder two levels up: `![Preview](../../screenshots/preview.png)`
 ---
 
+
+# 🖼️ 13. Adding & Resizing Screenshots
+To add a screenshot to your project and control its size, use **HTML `<img>` tags** instead of standard Markdown.
+
+### Step 1: Create a Folder
+Create a folder named `screenshots` at the root of your package or project.
+
+### Step 2: Add your Image
+Paste your screenshot image into that folder (e.g., `preview.png`).
+
+### Step 3: Use the HTML Syntax for Resizing
+Standard Markdown `![Alt]()` does not support resizing. Use this instead:
+
+ ```html
+ <img src="path_to_image" width="300" />
+ ```
+
+- **width**: Adjust the number (e.g., 200, 300, 500) to change the size.
+- **height**: (Optional) You can also set `height="600"`, but usually setting just `width` is better to keep the aspect ratio.
+
+### Step 4: Handle Relative Paths
+- Same folder: `<img src="./preview.png" width="300" />`
+- Folder inside current directory: `<img src="./screenshots/preview.png" width="300" />`
+- Folder two levels up: `<img src="../../screenshots/preview.png" width="300" />`
+---
 
 ## 🛠 Tech Stack
 

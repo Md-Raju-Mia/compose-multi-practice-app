@@ -15,4 +15,4 @@ This application displays a "Task Completed" screen. It is part of my journey in
 - Responsive design that centers content regardless of screen size.
 
 ## 📸 Preview
-![Task Manager Screenshot](screenshots/task_manager_preview.png)
+<img src="screenshots/task_manager_preview.png" width="300" />
