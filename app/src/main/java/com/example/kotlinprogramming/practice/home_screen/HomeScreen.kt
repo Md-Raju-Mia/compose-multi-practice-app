@@ -20,6 +20,7 @@ import com.example.kotlinprogramming.R
 fun HomeScreen(
     onHappyBirthdayClick: () -> Unit,
     onComposableArticleClick: () -> Unit,
+    onTaskManagerClick: () -> Unit,
     onDiceRollerClick: () -> Unit
 ){
     Column(
@@ -43,6 +44,11 @@ fun HomeScreen(
         AppLauncherCard(
             title = stringResource(R.string.title_jetpack_compose_tutorial),
             onClick = onComposableArticleClick
+        )
+
+        AppLauncherCard(
+            title = stringResource(R.string.task_manager_app_text),
+            onClick = onTaskManagerClick
         )
 
         AppLauncherCard(
