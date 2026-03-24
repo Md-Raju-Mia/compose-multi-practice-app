@@ -39,23 +39,8 @@ fun HomeScreen(
         )
 
         AppLauncherCard(
-            title = stringResource(R.string.happy_birthday_app_text),
-            onClick = onHappyBirthdayClick
-        )
-
-        AppLauncherCard(
-            title = stringResource(R.string.title_jetpack_compose_tutorial),
-            onClick = onComposableArticleClick
-        )
-
-        AppLauncherCard(
-            title = stringResource(R.string.task_manager_app_text),
-            onClick = onTaskManagerClick
-        )
-
-        AppLauncherCard(
-            title = stringResource(R.string.compose_quadrant_app_text),
-            onClick = onComposeQuadrantClick
+            title = stringResource(R.string.dice_roller_app_text),
+            onClick = onDiceRollerClick
         )
 
         AppLauncherCard(
@@ -64,8 +49,23 @@ fun HomeScreen(
         )
 
         AppLauncherCard(
-            title = stringResource(R.string.dice_roller_app_text),
-            onClick = onDiceRollerClick
+            title = stringResource(R.string.compose_quadrant_app_text),
+            onClick = onComposeQuadrantClick
+        )
+
+        AppLauncherCard(
+            title = stringResource(R.string.task_manager_app_text),
+            onClick = onTaskManagerClick
+        )
+
+        AppLauncherCard(
+            title = stringResource(R.string.title_jetpack_compose_tutorial),
+            onClick = onComposableArticleClick
+        )
+
+        AppLauncherCard(
+            title = stringResource(R.string.happy_birthday_app_text),
+            onClick = onHappyBirthdayClick
         )
     }
 }

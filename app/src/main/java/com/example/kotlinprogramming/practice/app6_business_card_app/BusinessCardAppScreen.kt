@@ -9,7 +9,7 @@ import com.example.kotlinprogramming.ui.theme.KotlinProgrammingTheme
 
 @Composable
 fun BusinessCardApp(){
-    BusinessCardAppScreen()
+//    BusinessCardAppScreen()
 }
 
 private fun BusinessCardAppScreen(
