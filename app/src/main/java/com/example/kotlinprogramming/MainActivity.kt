@@ -7,11 +7,13 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.safeDrawingPadding
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import com.example.kotlinprogramming.practice.app1_happy_birthday.GreetingImage
@@ -19,6 +21,8 @@ import com.example.kotlinprogramming.practice.app2_compose_article.ComposeArticl
 import com.example.kotlinprogramming.practice.app3_task_manager.TaskManagerApp
 import com.example.kotlinprogramming.practice.app4_compose_quadrant.ComposeQuadrantApp
 import com.example.kotlinprogramming.practice.app6_business_card_app.BusinessCardApp
+import com.example.kotlinprogramming.practice.app7_diceroller.DiceRollerApp
+import com.example.kotlinprogramming.practice.app7_diceroller.DiceWithButtonAndImage
 import com.example.kotlinprogramming.practice.home_screen.HomeScreen
 import com.example.kotlinprogramming.practice.home_screen.PracticeScreen
 import com.example.kotlinprogramming.ui.theme.KotlinProgrammingTheme
@@ -90,7 +94,7 @@ class MainActivity : ComponentActivity() {
                     }
                     
                     PracticeScreen.DICE_ROLLER -> {
-                        // Put DiceRollerScreen() here later
+                        DiceRollerApp()
                     }
                 }
             }

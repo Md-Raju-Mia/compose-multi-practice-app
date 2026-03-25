@@ -17,4 +17,7 @@
     <string name="compose_quadrant_app_text">Compose Quadrant App</string>
     <string name="business_card_app_text">Business Card App</string>
 
+
+    <string name="roll">Roll</string>
+
 </resources>
