@@ -46,7 +46,7 @@ val imageResource = when (result) {
 ---
 
 ## 📸 Final Look
-<img src="screenshots/dice_roller_preview.png.png" width="300" />
+<img src="screenshots/dice_roller_preview.png" width="300" />
 
 ---
 *This project opened the door to building truly dynamic apps that respond to user input.* 🎲🔥
