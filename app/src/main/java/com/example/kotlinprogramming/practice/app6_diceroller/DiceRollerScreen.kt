@@ -1,4 +1,4 @@
-package com.example.kotlinprogramming.practice.app7_diceroller
+package com.example.kotlinprogramming.practice.app6_diceroller
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
