@@ -1,14 +1,14 @@
 package com.example.kotlinprogramming.practice.app6_business_card_app
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Call
 import androidx.compose.material.icons.filled.Email
@@ -16,7 +16,6 @@ import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -26,8 +25,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.material3.Surface
-import androidx.compose.material3.MaterialTheme
+import androidx.compose.ui.Alignment
 import com.example.kotlinprogramming.R
 import com.example.kotlinprogramming.ui.theme.KotlinProgrammingTheme
 
@@ -35,9 +33,25 @@ import com.example.kotlinprogramming.ui.theme.KotlinProgrammingTheme
 
 @Composable
 fun BusinessCardApp(modifier: Modifier = Modifier){
-    Box(modifier = modifier){
-        ProfileInfo(modifier = modifier.align(Alignment.Center))
-        ContactInfo(modifier = modifier.align(Alignment.BottomCenter))
+    // We use a Column to hold everything.
+    // The trick is to use 'weight(1f)' on the top part to push the bottom part down.
+    Column(
+        modifier = modifier
+            .fillMaxSize()
+            .background(Color(0xFFD2E8D4)),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        // Profile Section - Centered in the remaining space
+        Column(
+            modifier = modifier.weight(1f),
+            verticalArrangement = Arrangement.Center
+        ) {
+            ProfileInfo()
+        }
+        // Contact Section - Pushed to the bottom
+        ContactInfo(
+            modifier = modifier.padding(bottom = 50.dp)
+        )
     }
 }
 
@@ -45,20 +59,24 @@ fun BusinessCardApp(modifier: Modifier = Modifier){
 private fun ProfileInfo(modifier: Modifier = Modifier){
 
     Column(
-        modifier = modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.Center,
+        modifier = modifier,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Image(
             painter = painterResource(R.drawable.android_logo),
             contentDescription = null,
+            modifier = modifier
+                .size(120.dp)
+                .background(Color(0xFF073042))
+                .padding(8.dp)
         )
         Text(
             text = "Md. Raju Mia",
             fontSize = 40.sp,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
-            color = Color(0xFF006D3A)
+            color = Color(0xFF006D3A),
+            modifier = modifier.padding(top = 8.dp)
         )
         Text(
             text = "Android Developer Extraordinarie",
@@ -78,9 +96,10 @@ private fun ProfileInfo(modifier: Modifier = Modifier){
 
 @Composable
 private fun ContactInfo(modifier: Modifier = Modifier){
-
+    // Wrapping in a Column so all items are aligned to their start
     Column(
-        modifier = modifier.padding(bottom = 20.dp)
+        modifier = modifier,
+        horizontalAlignment = Alignment.Start
     ) {
         ContactRow(
             text = "+880 1723510871",
@@ -101,9 +120,12 @@ private fun ContactInfo(modifier: Modifier = Modifier){
 @Composable
 private fun ContactRow(
     text: String,
-    icon: ImageVector
+    icon: ImageVector,
+    modifier: Modifier = Modifier
 ){
-    Row {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
         Icon(
             imageVector = icon,
             contentDescription = null,
@@ -127,14 +149,6 @@ private fun ContactRow(
 @Composable
 fun BusinessCardAppPreview(){
     KotlinProgrammingTheme{
-        // A surface container using the 'background' color from the theme
-        Surface(
-            modifier = Modifier.fillMaxSize(),
-            color = Color(0xFFD2E8D4)
-            /*color = MaterialTheme.colorScheme.background*/
-        ) {
             BusinessCardApp()
-        }
-
     }
 }
