@@ -56,12 +56,13 @@ fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) 
             contentDescription = null,
             contentScale = ContentScale.Crop,
             alpha = 0.5F,
+            modifier = Modifier.fillMaxSize()
 
         )
         GreetingText(
             message = message,
             from = from,
-            modifier = Modifier.fillMaxSize().padding(8.dp)
+            modifier = Modifier.fillMaxSize().safeDrawingPadding().padding(8.dp)
         )
     }
 }
@@ -74,7 +75,7 @@ fun BirthdayCardPreview() {
         GreetingImage(
             message = stringResource(R.string.happy_birthday_sam_text),
             from = stringResource(R.string.from_emma_text),
-            modifier = Modifier.safeDrawingPadding()
+            modifier = Modifier.fillMaxSize()
         )
     }
 }

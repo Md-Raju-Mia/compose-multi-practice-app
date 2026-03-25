@@ -5,16 +5,20 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.safeDrawingPadding
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import com.example.kotlinprogramming.practice.app1_happy_birthday.GreetingImage
 import com.example.kotlinprogramming.practice.app2_compose_article.ComposeArticleApp
 import com.example.kotlinprogramming.practice.app3_task_manager.TaskManagerApp
 import com.example.kotlinprogramming.practice.app4_compose_quadrant.ComposeQuadrantApp
+import com.example.kotlinprogramming.practice.app6_business_card_app.BusinessCardApp
 import com.example.kotlinprogramming.practice.home_screen.HomeScreen
 import com.example.kotlinprogramming.practice.home_screen.PracticeScreen
 import com.example.kotlinprogramming.ui.theme.KotlinProgrammingTheme
@@ -60,7 +64,7 @@ class MainActivity : ComponentActivity() {
                         GreetingImage(
                             message = getString(R.string.happy_birthday_sam_text),
                             from = getString(R.string.from_emma_text),
-                            modifier = Modifier.safeDrawingPadding()
+                            modifier = Modifier.fillMaxSize()
                         )
                     }
 
@@ -75,7 +79,14 @@ class MainActivity : ComponentActivity() {
                         ComposeQuadrantApp()
                     }
                     PracticeScreen.BUSINESS_CARD -> {
-                        // Put BusinessCardScreen() here later
+                        Surface(
+                            modifier = Modifier.fillMaxSize(),
+                            color = Color(0xFFD2E8D4)
+                        ) {
+                            BusinessCardApp(
+                                modifier = Modifier.safeDrawingPadding()
+                            )
+                        }
                     }
                     
                     PracticeScreen.DICE_ROLLER -> {
