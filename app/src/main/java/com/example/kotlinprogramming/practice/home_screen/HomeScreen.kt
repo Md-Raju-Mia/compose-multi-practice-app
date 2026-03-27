@@ -23,7 +23,8 @@ fun HomeScreen(
     onTaskManagerClick: () -> Unit,
     onComposeQuadrantClick: () -> Unit,
     onBusinessCardClick: () -> Unit,
-    onDiceRollerClick: () -> Unit
+    onDiceRollerClick: () -> Unit,
+    onLemonadeClick: () -> Unit
 ){
     Column(
         modifier = Modifier
@@ -36,6 +37,10 @@ fun HomeScreen(
             text = "Practice Apps",
             style = MaterialTheme.typography.headlineMedium,
             modifier = Modifier.padding(bottom = 8.dp)
+        )
+        AppLauncherCard(
+            title = stringResource(R.string.lemonade_app_text),
+            onClick = onLemonadeClick
         )
 
         AppLauncherCard(

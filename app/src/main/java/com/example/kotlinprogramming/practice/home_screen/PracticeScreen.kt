@@ -7,5 +7,6 @@ enum class PracticeScreen {
     TASK_MANAGER,
     COMPOSE_QUADRANT,
     BUSINESS_CARD,
-    DICE_ROLLER
+    DICE_ROLLER,
+    LEMONADE,
 }

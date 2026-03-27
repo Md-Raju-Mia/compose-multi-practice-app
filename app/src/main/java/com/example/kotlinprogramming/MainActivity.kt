@@ -20,6 +20,7 @@ import com.example.kotlinprogramming.practice.app3_task_manager.TaskManagerApp
 import com.example.kotlinprogramming.practice.app4_compose_quadrant.ComposeQuadrantApp
 import com.example.kotlinprogramming.practice.app5_business_card_app.BusinessCardApp
 import com.example.kotlinprogramming.practice.app6_diceroller.DiceRollerApp
+import com.example.kotlinprogramming.practice.app7_lemonade.LemonadeApp
 import com.example.kotlinprogramming.practice.home_screen.HomeScreen
 import com.example.kotlinprogramming.practice.home_screen.PracticeScreen
 import com.example.kotlinprogramming.ui.theme.KotlinProgrammingTheme
@@ -58,6 +59,9 @@ class MainActivity : ComponentActivity() {
                         },
                         onDiceRollerClick = {
                             currentScreen = PracticeScreen.DICE_ROLLER
+                        },
+                        onLemonadeClick = {
+                            currentScreen = PracticeScreen.LEMONADE
                         }
                     )
 
@@ -92,6 +96,9 @@ class MainActivity : ComponentActivity() {
                     
                     PracticeScreen.DICE_ROLLER -> {
                         DiceRollerApp()
+                    }
+                    PracticeScreen.LEMONADE -> {
+                        LemonadeApp()
                     }
                 }
             }
