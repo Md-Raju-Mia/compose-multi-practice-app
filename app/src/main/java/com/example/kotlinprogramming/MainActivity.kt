@@ -7,6 +7,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.safeDrawingPadding
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -21,6 +22,7 @@ import com.example.kotlinprogramming.practice.app4_compose_quadrant.ComposeQuadr
 import com.example.kotlinprogramming.practice.app5_business_card_app.BusinessCardApp
 import com.example.kotlinprogramming.practice.app6_diceroller.DiceRollerApp
 import com.example.kotlinprogramming.practice.app7_lemonade.LemonadeApp
+import com.example.kotlinprogramming.practice.app8_tip_calculator.TipCalculatorApp
 import com.example.kotlinprogramming.practice.home_screen.HomeScreen
 import com.example.kotlinprogramming.practice.home_screen.PracticeScreen
 import com.example.kotlinprogramming.ui.theme.KotlinProgrammingTheme
@@ -62,6 +64,9 @@ class MainActivity : ComponentActivity() {
                         },
                         onLemonadeClick = {
                             currentScreen = PracticeScreen.LEMONADE
+                        },
+                        onTipCalculatorClick = {
+                            currentScreen = PracticeScreen.TIP_CALCULATOR
                         }
                     )
 
@@ -99,6 +104,14 @@ class MainActivity : ComponentActivity() {
                     }
                     PracticeScreen.LEMONADE -> {
                         LemonadeApp()
+                    }
+                    PracticeScreen.TIP_CALCULATOR -> {
+                        Surface(
+                            modifier = Modifier.fillMaxSize(),
+                            color = MaterialTheme.colorScheme.background
+                        ) {
+                            TipCalculatorApp()
+                        }
                     }
                 }
             }
