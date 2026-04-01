@@ -12,6 +12,7 @@ Explore the individual projects below. Each link will take you directly to the s
 
 | Project Name | Preview | Highlights |
 | :--- | :---: | :--- |
+| **[08. Tip Calculator](./app/src/main/java/com/example/kotlinprogramming/practice/app8_tip_calculator)** | <img src="app/src/main/java/com/example/kotlinprogramming/practice/app8_tip_calculator/screenshots/tip_calculator_preview.png" width="200"/> | Advanced Input, Keyboard Actions & State Hoisting |
 | **[07. Lemonade App](./app/src/main/java/com/example/kotlinprogramming/practice/app7_lemonade)** | <img src="app/src/main/java/com/example/kotlinprogramming/practice/app7_lemonade/screenshots/squeeze_lemon_preview.png" width="200"/> | Complex State Management, UI Flow & Randomization |
 | **[06. Dice Roller App](./app/src/main/java/com/example/kotlinprogramming/practice/app6_diceroller)** | <img src="app/src/main/java/com/example/kotlinprogramming/practice/app6_diceroller/screenshots/dice_roller_preview.png" width="200"/> | Introducing **State**! Recomposition & Click Interactions |
 | **[05. Business Card App](./app/src/main/java/com/example/kotlinprogramming/practice/app5_business_card_app)** | <img src="app/src/main/java/com/example/kotlinprogramming/practice/app5_business_card_app/screenshots/business_card_preview.png" width="200"/> | Material Design 3, Icons & Professional Layouts |
