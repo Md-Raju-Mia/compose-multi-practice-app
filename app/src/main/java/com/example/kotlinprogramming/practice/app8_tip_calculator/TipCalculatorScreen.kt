@@ -137,7 +137,7 @@ fun TipCalculatorApp() {
  * according to the local currency.
  * Example would be "$10.00".
  */
-private fun calculateTip(amount: Double, tipPercent: Double, roundUp: Boolean): String {
+internal fun calculateTip(amount: Double, tipPercent: Double, roundUp: Boolean): String {
     var tip = tipPercent / 100 * amount
 
     if (roundUp) {
