@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.safeDrawingPadding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
@@ -217,18 +218,21 @@ fun ArtworkNavigationButtons(
 ) {
     Row(
         modifier = modifier,
-        horizontalArrangement = Arrangement.spacedBy(12.dp)
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.SpaceBetween
     ) {
         Button(
             onClick = onPreviousClick,
-            modifier = Modifier.weight(1f)
+            modifier = Modifier.width(150.dp)
         ) {
             Text(text = "Previous")
         }
 
+//        Spacer(modifier = Modifier.weight(1f)) //"  horizontalArrangement = Arrangement.SpaceBetween" SpaceBetween works it's same task
+
         Button(
             onClick = onNextClick,
-            modifier = Modifier.weight(1f)
+            modifier = Modifier.width(150.dp)
         ) {
             Text(text = "Next")
         }
