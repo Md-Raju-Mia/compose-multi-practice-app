@@ -23,6 +23,7 @@ import com.example.kotlinprogramming.practice.app5_business_card_app.BusinessCar
 import com.example.kotlinprogramming.practice.app6_diceroller.DiceRollerApp
 import com.example.kotlinprogramming.practice.app7_lemonade.LemonadeApp
 import com.example.kotlinprogramming.practice.app8_tip_calculator.TipCalculatorApp
+import com.example.kotlinprogramming.practice.app9_art_space.ArtSpaceApp
 import com.example.kotlinprogramming.practice.home_screen.HomeScreen
 import com.example.kotlinprogramming.practice.home_screen.PracticeScreen
 import com.example.kotlinprogramming.ui.theme.KotlinProgrammingTheme
@@ -67,6 +68,9 @@ class MainActivity : ComponentActivity() {
                         },
                         onTipCalculatorClick = {
                             currentScreen = PracticeScreen.TIP_CALCULATOR
+                        },
+                        onArtSpaceClick = {
+                            currentScreen = PracticeScreen.ART_SPACE
                         }
                     )
 
@@ -112,6 +116,10 @@ class MainActivity : ComponentActivity() {
                         ) {
                             TipCalculatorApp()
                         }
+                    }
+
+                    PracticeScreen.ART_SPACE -> {
+                        ArtSpaceApp()
                     }
                 }
             }

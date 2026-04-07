@@ -39,6 +39,7 @@
     <string name="tip_calculator_app_text">Tip Calculator App</string>
     <string name="how_was_the_service">Tip Percentage</string>
     <string name="round_up_tip">Round up tip?</string>
+    <string name="art_space_app_text">Art Space App</string>
 
 
 </resources>

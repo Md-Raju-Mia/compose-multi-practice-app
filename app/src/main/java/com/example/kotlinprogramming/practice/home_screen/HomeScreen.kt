@@ -25,7 +25,8 @@ fun HomeScreen(
     onBusinessCardClick: () -> Unit,
     onDiceRollerClick: () -> Unit,
     onLemonadeClick: () -> Unit,
-    onTipCalculatorClick: () -> Unit
+    onTipCalculatorClick: () -> Unit,
+    onArtSpaceClick: () -> Unit,
 ){
     Column(
         modifier = Modifier
@@ -39,6 +40,11 @@ fun HomeScreen(
             style = MaterialTheme.typography.headlineMedium,
             modifier = Modifier.padding(bottom = 8.dp)
         )
+        AppLauncherCard(
+            title = stringResource(R.string.art_space_app_text),
+            onClick = onArtSpaceClick
+        )
+
         AppLauncherCard(
             title = stringResource(R.string.tip_calculator_app_text),
             onClick = onTipCalculatorClick

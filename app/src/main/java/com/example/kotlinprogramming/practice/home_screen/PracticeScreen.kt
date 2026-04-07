@@ -9,6 +9,8 @@ enum class PracticeScreen {
     BUSINESS_CARD,
     DICE_ROLLER,
     LEMONADE,
-    TIP_CALCULATOR
+    TIP_CALCULATOR,
+    ART_SPACE
+
 
 }
