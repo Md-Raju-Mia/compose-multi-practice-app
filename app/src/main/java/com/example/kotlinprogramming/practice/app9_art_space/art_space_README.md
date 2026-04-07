@@ -1,32 +1,50 @@
 # Art Space App 🎨
 
-## Overview
-Art Space is a digital gallery application designed to showcase various artworks in a clean, elegant, and responsive interface. This project focuses on mastering layout management and component-based UI design in Jetpack Compose.
+## What is this app?
+Art Space is a simple digital gallery. It lets you browse through different pictures (artworks) by clicking "Next" or "Previous" buttons. It's built using **Jetpack Compose**, which is the modern way to make Android apps.
 
-## What I Learned 🚀
-Building this application provided deep insights into modern Android UI development:
+---
 
-*   **Modular Component Architecture:** I learned how to decompose a complex screen into smaller, specialized composables (`ArtworkImageCard`, `ArtworkInfoCard`, `ArtworkNavigationButtons`). This makes the code more readable, maintainable, and testable.
-*   **Flexible Layouts with Modifiers:**
-    *   Using `Modifier.weight(1f)` to allow the artwork image to dynamically fill available vertical space while keeping other elements visible.
-    *   Implementing `safeDrawingPadding()` to ensure the UI respects system bars and avoids cutouts.
-    *   Applying `Arrangement.spacedBy()` for consistent spacing between interactive elements.
-*   **Material 3 Surface & Cards:** Mastering the use of `Card` components with custom `elevation`, `shapes` (`RoundedCornerShape`), and `colors` to create a tiered visual hierarchy.
-*   **Image Scaling:** Using `ContentScale.Fit` within a `Box` container to ensure artworks maintain their aspect ratio across different device dimensions.
-*   **Theme Integration:** Leveraging `MaterialTheme.colorScheme` and `MaterialTheme.typography` to ensure the app remains consistent with the project's overall design system and supports dark mode effortlessly.
+## 💡 What I Learned (In Simple Words)
 
-## How the App Looks 📱
+To build this app, I used several key "tools" from Jetpack Compose. Here is what they are and why they are useful:
 
-The UI features a polished dark-themed gallery view with a prominent artwork display, clear metadata attribution, and intuitive navigation controls.
+### 1. The App's Memory (**State**)
+*   **`mutableIntStateOf`**: This is like a small notebook where the app writes down which picture it is currently showing. 
+*   **`remember`**: This tells the app, "Don't forget what's in your notebook even if you have to refresh the screen." Without this, the app would reset to the first picture every time you tilt the phone!
 
-| Art Space Gallery |
+### 2. Making Decisions (**When**)
+*   **`when` statement**: This is the app's brain. It looks at the number in its "notebook" (the State) and says: *"If the number is 1, show the Lemon Tree. If it's 2, show the Squeeze picture."*
+
+### 3. Building Blocks (**Layouts**)
+*   **`Column`**: Stacks items on top of each other (Top to Bottom).
+*   **`Row`**: Places items side-by-side (Left to Right) — used for the buttons.
+*   **`Box`**: A container that lets you put things on top of each other (like putting a picture inside a frame).
+
+### 4. Customizing Items (**Modifiers**)
+*   **`Modifier.weight(1f)`**: This tells a component (like the image) to take up all the "extra" space available. It makes sure the image is big while the buttons stay at the bottom.
+*   **`safeDrawingPadding()`**: This is like a safety zone. It prevents your app's content from being hidden behind the phone's camera hole or the status bar at the top.
+*   **`padding`**: Adds "breathing room" or empty space around an element so it doesn't look crowded.
+
+### 5. Stylish Containers (**Cards**)
+*   **`Card`**: This gives the UI a "physical" look. It adds rounded corners and a slight shadow (elevation) to make the artwork look like it's sitting on a real gallery wall.
+
+---
+
+## 📱 How the App Looks
+
+The app has a clean design with a large area for the art, a dedicated info box for the title/artist, and easy-to-use navigation buttons.
+
+| Art Space Preview |
 | :---: |
 | <img src="screenshots/art_space_preview.png" width="300" alt="Art Space App Preview" /> |
 
-## Key Components
-1.  **Artwork Image Card:** A elevated card that hosts the masterpiece, providing a "physical" feel to the digital art.
-2.  **Information Card:** A distinct section using `surfaceVariant` colors to present the title, artist name, and year of creation.
-3.  **Interactive Navigation:** A row of weighted buttons that provide a balanced and easy-to-tap interface for browsing the collection.
+---
+
+## 🚀 Key Features
+*   **Interactive Buttons:** Tap "Next" or "Previous" to cycle through the gallery.
+*   **Smart Looping:** When you reach the last picture and click "Next," it goes back to the first one automatically.
+*   **Responsive:** The image shrinks or grows to fit your screen perfectly using `ContentScale.Fit`.
 
 ---
-*Created as part of the Jetpack Compose Learning Journey.*
+*Created with ❤️ while learning Android Development.*

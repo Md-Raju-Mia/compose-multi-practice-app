@@ -19,6 +19,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
@@ -30,15 +34,69 @@ import com.example.kotlinprogramming.ui.theme.KotlinProgrammingTheme
 
 @Composable
 fun ArtSpaceApp() {
+    // 1. Create state for dynamic elements (Artwork ID)
+    var currentArtworkId by remember { mutableIntStateOf(1) }
+    val totalArtworks = 4
+
+    // 2. Determine artwork details based on ID
+    val artworkDetails = when (currentArtworkId) {
+        1 -> ArtworkData(
+            title = "The Lush Lemon Tree",
+            artist = "Nature's Gallery",
+            year = "2021",
+            imageRes = R.drawable.lemon_tree
+        )
+        2 -> ArtworkData(
+            title = "A Fresh Squeeze",
+            artist = "The Kitchen Studio",
+            year = "2022",
+            imageRes = R.drawable.lemon_squeeze
+        )
+        3 -> ArtworkData(
+            title = "Refreshing Lemon Drink",
+            artist = "Summer Vibe",
+            year = "2023",
+            imageRes = R.drawable.lemon_drink
+        )
+        else -> ArtworkData(
+            title = "The Golden Harvest",
+            artist = "Orchard Masters",
+            year = "2024",
+            imageRes = R.drawable.lemon_restart
+        )
+    }
+
     ArtSpaceScreen(
-        artworkTitle = "Still Life of Blue Rose and Other Flowers",
-        artistName = "Owen Scott",
-        year = "2021",
-        imageRes = R.drawable.lemon_tree,
-        onPreviousClick = {},
-        onNextClick = {}
+        artworkTitle = artworkDetails.title,
+        artistName = artworkDetails.artist,
+        year = artworkDetails.year,
+        imageRes = artworkDetails.imageRes,
+        // 3. Write conditional logic for Next interaction
+        onNextClick = {
+            currentArtworkId = if (currentArtworkId < totalArtworks) {
+                currentArtworkId + 1
+            } else {
+                1 // Loop back to first
+            }
+        },
+        // 4. Write conditional logic for Previous interaction
+        onPreviousClick = {
+            currentArtworkId = if (currentArtworkId > 1) {
+                currentArtworkId - 1
+            } else {
+                totalArtworks // Loop back to last
+            }
+        }
     )
 }
+
+// Data class to hold artwork information
+data class ArtworkData(
+    val title: String,
+    val artist: String,
+    val year: String,
+    val imageRes: Int
+)
 
 @Composable
 fun ArtSpaceScreen(
